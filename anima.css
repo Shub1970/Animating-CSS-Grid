@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid {
+  background-color: aqua;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  transition: 350ms;
+}
+
+.left {
+  background-color: aquamarine;
+}
+.grid:has(.left:hover) {
+  grid-template-columns: 40% 50% 10%;
+}
+.right {
+  background-color: rgb(98, 98, 245);
+}
+.grid:has(.right:hover) {
+  grid-template-columns: 10% 50% 40%;
+}
